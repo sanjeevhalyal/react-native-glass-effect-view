@@ -8,6 +8,12 @@
 
 #import "RCTFabricComponentsPlugins.h"
 
+// Declare the private API methods so the compiler knows they exist
+@interface NSObject (GlassEffectCompat)
+- (void)setInteractive:(BOOL)interactive;
+- (void)setSpacing:(CGFloat)spacing;
+@end
+
 using namespace facebook::react;
 
 @interface GlassEffectView () <RCTGlassEffectViewViewProtocol>
